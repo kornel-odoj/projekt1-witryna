@@ -43,6 +43,18 @@ nav a {
   border-radius: 5px;
   margin: 0 10px;
 }
+nav.white-bg {
+    background-color: white;
+    overflow: hidden;
+}
+
+nav.white-bg a {
+    background-color: white;
+    color: #8B4513;
+}
+nav.white-bg a:hover {
+    color: black;
+}
 
 nav a:hover {
   background-color: #937460;
