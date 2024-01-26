@@ -167,3 +167,10 @@ footer a{
 #next-btn {
   margin-left: 10px;
 }
+nav.white-bg {
+  background-color: white;
+}
+nav.white-bg a {
+  background-color: white;
+  color: #8B4513;
+}
