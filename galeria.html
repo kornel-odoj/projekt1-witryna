@@ -33,25 +33,25 @@
     </header>
 
     <div id="galeria">
-        <div id="obecnyobraz">
+        <div id="current-pic">
             <img src="/images/kolumb1.jpg" alt="kolumb">
         </div>
-        <div id="resztaobrazow">
-            <img src="/images/santa-maria.jpeg" alt="Santa Maria" onclick="zmienObraz(this)">
-            <img src="/images/kompas.jpg" alt="Kompas" onclick="zmienObraz(this)">
-            <img src="/images/kwadrant.jpeg" alt="Kwadrant" onclick="zmienObraz(this)">
-            <img src="/images/list.jpeg" alt="List" onclick="zmienObraz(this)">
-            <img src="/images/mapa.jpeg" alt="Mapa" onclick="zmienObraz(this)">
-            <img src="/images/amerigo-vespucci.jpeg" alt="Vespucci" onclick="zmienObraz(this)">
-            <img src="/images/ferdynand-magellan.jpeg" alt="Magellan" onclick="zmienObraz(this)">
-            <img src="/images/james-cook.jpg" alt="Cook" onclick="zmienObraz(this)">
-            <img src="/images/john-cabot.jpg" alt="Cabot" onclick="zmienObraz(this)">
-            <img src="/images/vasco-da-gama.jpeg" alt="Da Gama" onclick="zmienObraz(this)">
-            <img src="/images/kolumb1.jpg" alt="Kolumb" onclick="zmienObraz(this)">
+        <div id="others">
+            <img src="/images/santa-maria.jpeg" alt="Santa Maria" onclick="changepic(this)">
+            <img src="/images/kompas.jpg" alt="Kompas" onclick="changepic(this)">
+            <img src="/images/kwadrant.jpeg" alt="Kwadrant" onclick="changepic(this)">
+            <img src="/images/list.jpeg" alt="List" onclick="changepic(this)">
+            <img src="/images/mapa.jpeg" alt="Mapa" onclick="changepic(this)">
+            <img src="/images/amerigo-vespucci.jpeg" alt="Vespucci" onclick="changepic(this)">
+            <img src="/images/ferdynand-magellan.jpeg" alt="Magellan" onclick="changepic(this)">
+            <img src="/images/james-cook.jpg" alt="Cook" onclick="changepic(this)">
+            <img src="/images/john-cabot.jpg" alt="Cabot" onclick="changepic(this)">
+            <img src="/images/vasco-da-gama.jpeg" alt="Da Gama" onclick="changepic(this)">
+            <img src="/images/kolumb1.jpg" alt="Kolumb" onclick="changepic(this)">
             
         </div>
-        <button id="prev-btn" onclick="poprzedni()">Poprzedni</button>
-        <button id="next-btn" onclick="nastepny()">Następny</button>
+        <button id="prev-btn" onclick="prevpic()">Poprzedni</button>
+        <button id="next-btn" onclick="nextpic()">Następny</button>
     </div>
     <footer>
             <p>© Explora<br>
@@ -63,33 +63,33 @@
     </footer>
 
     <script>
-        function nastepny() {
-            const obecnyObraz = document.getElementById('obecnyobraz');
-            const resztaObrazow = document.getElementById('resztaobrazow');
+        function nextpic() {
+            const current = document.getElementById('current-pic');
+            const others = document.getElementById('others');
 
-            const pierwszy = resztaObrazow.firstElementChild;
-            const drugi = resztaObrazow.children[1];
+            const pierwszy = others.firstElementChild;
+            const drugi = others.children[1];
 
-            resztaObrazow.removeChild(pierwszy);
-            resztaObrazow.appendChild(pierwszy);
-            obecnyObraz.innerHTML = drugi.outerHTML;
+            others.removeChild(pierwszy);
+            others.appendChild(pierwszy);
+            current.innerHTML = drugi.outerHTML;
         }
 
-        function poprzedni() {
-            const obecnyObraz = document.getElementById('obecnyobraz');
-            const resztaObrazow = document.getElementById('resztaobrazow');
+        function prevpic() {
+            const current = document.getElementById('current-pic');
+            const others = document.getElementById('others');
 
-            const ostatni = resztaObrazow.lastElementChild;
-            const przedostatni = resztaObrazow.children[resztaObrazow.children.length - 2];
+            const ostatni = others.lastElementChild;
+            const przedostatni = others.children[others.children.length - 2];
 
-            resztaObrazow.removeChild(ostatni);
-            resztaObrazow.insertBefore(ostatni, resztaObrazow.firstElementChild);
-            obecnyObraz.innerHTML = przedostatni.outerHTML;
+            others.removeChild(ostatni);
+            others.insertBefore(ostatni, others.firstElementChild);
+            current.innerHTML = przedostatni.outerHTML;
         }
 
-        function zmienObraz(element) {
-            const obecnyObraz = document.getElementById('obecnyobraz');
-            obecnyObraz.innerHTML = element.outerHTML;
+        function changepic(element) {
+            const current = document.getElementById('current-pic');
+            current.innerHTML = element.outerHTML;
         }
     </script>
 

@@ -125,7 +125,7 @@ footer a{
   align-items: flex-start; 
 }
 
-#obecnyobraz {
+#current-pic {
   overflow: hidden;
   text-align: center;
   box-shadow: none;
@@ -135,13 +135,13 @@ footer a{
 
 }
 
-#obecnyobraz img {
+#current-pic img {
   width: 450px;
   height: 450px;
   border-radius: 8px;
 }
 
-#resztaobrazow {
+#others {
   overflow: hidden;
   margin-top: 10px;
   display: flex;
@@ -152,7 +152,7 @@ footer a{
   max-height: fit-content;
 }
 
-#resztaobrazow img {
+#others img {
   width: 150px;
   height: 150px;
   margin-bottom: 10px; 
