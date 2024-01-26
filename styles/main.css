@@ -2,6 +2,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 20px;
   background-color: #f4f4f4;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -9,22 +10,17 @@ header {
   background-color: #938f71;
   color: white;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   position: relative;
-}
-h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
 }
 
 #site-logo {
   font-family: "Montserrat", sans-serif;
-  font-style: italic;
   font-weight: 700;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 10px;
+  left: 10px;
   font-size: 2em;
   text-decoration: none;
   color: white;
@@ -53,10 +49,7 @@ nav a:hover {
 }
 
 div {
-  margin-top: 20px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
   padding: 20px;
   overflow: hidden; 
 }
@@ -66,6 +59,8 @@ div img {
   height: auto;
   margin-bottom: 15px;
   border-radius: 10px;
+  width: 300px;
+  height: 300px;
   float: left; 
   margin-right: 20px;
 }
@@ -88,9 +83,8 @@ footer {
   padding: 10px;
   background-color: #938f71;
   color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin-top: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #go-to-top {
@@ -170,11 +164,4 @@ footer a{
 
 #next-btn {
   margin-left: 10px;
-}
-nav.white-bg {
-  background-color: white;
-}
-nav.white-bg a {
-  background-color: white;
-  color: #8B4513;
 }
