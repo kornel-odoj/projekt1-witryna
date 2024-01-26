@@ -94,9 +94,9 @@ footer {
 }
 
 #go-to-top {
-  display: block;
   text-align: center;
-  margin-top: 10px;
+  height: 30px;
+  width: 30px;
   padding: 5px;
   background-color: #937460;
   color: white;
@@ -106,7 +106,7 @@ footer {
 }
 
 #go-to-top:hover {
-  background-color: #938f71;
+  background-color: #4c2a1e;
 }
 
 footer a{
